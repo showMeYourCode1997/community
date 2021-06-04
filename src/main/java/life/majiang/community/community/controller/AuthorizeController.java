@@ -38,15 +38,24 @@ public class AuthorizeController {
                            @RequestParam(name = "state") String state,
                            HttpServletRequest request,
                            HttpServletResponse response){
+        //点击登录后会跳转到github的一个url，会给我们返回一些信息
+        //用AccessTokenDTO存储
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
         accessTokenDTO.setCode(code);
         accessTokenDTO.setRedirect_uri(redirectUri);
         accessTokenDTO.setClient_id(clientId);
         accessTokenDTO.setClient_secret(clientSecret);
         accessTokenDTO.setState(state);
+
+        //githubProvider.getAccessToken是okhttp的post方法，将AccessTokenDTO传给github
+        //github会返回一个response，将其转成string并拆分之后拿到token
+        //将token通过githubProvider.getGithubUser方法（get方法），发送给github
+        //github会验证token，成功会返回给我们githubUser信息
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser = githubProvider.getGithubUser(accessToken);
+
         if (githubUser!=null){
+            //将githubUser信息，赋给我们model中的user
             User user = new User();
             String token = UUID.randomUUID().toString();
             user.setToken(token);
@@ -54,7 +63,9 @@ public class AuthorizeController {
             user.setAccountId(githubUser.getId());
             user.setGmtCreat(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreat());
+            //把user存储到数据库中
             userMapper.insert(user);
+            //给把这个token加到响应的cookie中
             response.addCookie(new Cookie("token",token));
             return "redirect:/";
         }
