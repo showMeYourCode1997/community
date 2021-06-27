@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--以下这行是配置路径，需要去手动加载路径，因为但是我们在pom里面已经配置了数据库的依赖-->
+    <!--
+        <classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" />
+    -->
+
+    <!--context是指定数据库，生产对象的表的标签-->
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
+        <jdbcConnection driverClass="org.h2.Driver"
+                        connectionURL="jdbc:h2:~/community"
+                        userId="zl"
+                        password="123">
+        </jdbcConnection>
+
+        <!--javaTypeResolver是将DWECIMAL和NUMERIC转换为java.math.BigDecimal,可选可不选-->
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!--javaModelGenerator定义model的属性,第一行是路径,targetPackage会自动创建-->
+        <javaModelGenerator targetPackage="life.majiang.community.community.model" targetProject="src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <!--对数据库进行查询的时候，如果发现有空格是否自动trim掉-->
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!--javaModelGenerator同上-->
+        <sqlMapGenerator targetPackage="mapper"  targetProject="src\main\resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!--定义java客户端生成器-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="life.majiang.community.community.mapper"  targetProject="src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!--定义表名，映射的对象名-->
+        <table tableName="user" domainObjectName="User" >
+            <!--true从数据库中获取列名，作为实体对象的属性;false则将返回名称改为驼峰标识-->
+            <property name="useActualColumnNames" value="false"/>
+
+            <!--generatedKey自动生成key的属性，但是我们不需要-->
+            <!--generatedKey column="ID" sqlStatement="DB2" identity="true" /-->
+
+            <!--columnOverride用来更改列名，但是我们不需要-->
+            <!--
+            <columnOverride column="DATE_FIELD" property="startDate" />
+            <ignoreColumn column="FRED" />
+            <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />
+            -->
+        </table>
+
+        <!--第二个表,只写由有用的部分-->
+        <table tableName="question" domainObjectName="Question" ></table>
+        <table tableName="comment" domainObjectName="Comment" ></table>
+        <table tableName="notification" domainObjectName="Notification" ></table>
+
+    </context>
+</generatorConfiguration>
