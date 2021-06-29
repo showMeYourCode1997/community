@@ -1,7 +1,6 @@
 package life.majiang.community.community.dto;
 
 import lombok.Data;
-import org.h2.mvstore.Page;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,5 @@
 package life.majiang.community.community.dto;
 
-import life.majiang.community.community.model.Comment;
-import life.majiang.community.community.model.Question;
 import life.majiang.community.community.model.User;
 import lombok.Data;
 
