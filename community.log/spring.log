@@ -753,3 +753,174 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/ZL/
 2021-06-30 14:42:46.087  INFO 9064 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 3.017 seconds (JVM running for 3.983)
 2021-06-30 14:42:46.088  INFO 9064 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
 2021-06-30 14:42:46.089  INFO 9064 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-30 14:43:06.892  INFO 12404 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-RNBM3MT with PID 12404 (D:\ChromeCoreDownloads\community\target\classes started by ZL in D:\ChromeCoreDownloads\community)
+2021-06-30 14:43:06.895  INFO 12404 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2021-06-30 14:43:06.936  INFO 12404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-30 14:43:06.937  INFO 12404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-30 14:43:07.770  INFO 12404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-06-30 14:43:07.776  INFO 12404 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-30 14:43:07.777  INFO 12404 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-30 14:43:07.843  INFO 12404 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-30 14:43:07.844  INFO 12404 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 907 ms
+2021-06-30 14:43:07.862  INFO 12404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-30 14:43:07.945  INFO 12404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-30 14:43:07.948  INFO 12404 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2021-06-30 14:43:08.385  INFO 12404 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-30 14:43:08.547  INFO 12404 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-30 14:43:08.571  INFO 12404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-06-30 14:43:08.579  INFO 12404 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 1.989 seconds (JVM running for 2.89)
+2021-06-30 14:43:08.580  INFO 12404 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-30 14:43:08.581  INFO 12404 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-30 14:43:14.743  INFO 12404 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-30 14:43:14.743  INFO 12404 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-30 14:43:14.744  INFO 12404 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-30 14:43:14.788 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.Q.countBySearch                : ==>  Preparing: select count (*) from QUESTION 
+2021-06-30 14:43:14.801 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.Q.countBySearch                : ==> Parameters: 
+2021-06-30 14:43:14.820 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.Q.countBySearch                : <==      Total: 1
+2021-06-30 14:43:14.821 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2021-06-30 14:43:14.824 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
+2021-06-30 14:43:14.828 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.Q.selectBySearch               : <==      Total: 5
+2021-06-30 14:43:14.829 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREAT, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-06-30 14:43:14.830 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2021-06-30 14:43:14.831 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2021-06-30 14:43:14.836 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREAT, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-06-30 14:43:14.836 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2021-06-30 14:43:14.837 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2021-06-30 14:43:14.837 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREAT, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-06-30 14:43:14.838 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2021-06-30 14:43:14.838 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2021-06-30 14:43:14.838 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREAT, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-06-30 14:43:14.839 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2021-06-30 14:43:14.840 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2021-06-30 14:43:14.840 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREAT, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-06-30 14:43:14.840 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2021-06-30 14:43:14.840 DEBUG 12404 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2021-06-30 14:43:16.696 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectByPrimaryKey           : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG , DESCRIPTION from QUESTION where ID = ? 
+2021-06-30 14:43:16.697 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectByPrimaryKey           : ==> Parameters: 196(Long)
+2021-06-30 14:43:16.697 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectByPrimaryKey           : <==      Total: 1
+2021-06-30 14:43:16.698 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREAT, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-06-30 14:43:16.698 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2021-06-30 14:43:16.698 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2021-06-30 14:43:16.699 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectRelated                : ==>  Preparing: select * from QUESTION where id != ? and tag regexp ? 
+2021-06-30 14:43:16.700 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectRelated                : ==> Parameters: 196(Long), java(String)
+2021-06-30 14:43:16.701 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectRelated                : <==      Total: 4
+2021-06-30 14:43:16.702 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectByPrimaryKey           : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG , DESCRIPTION from QUESTION where ID = ? 
+2021-06-30 14:43:16.703 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectByPrimaryKey           : ==> Parameters: 196(Long)
+2021-06-30 14:43:16.703 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectByPrimaryKey           : <==      Total: 1
+2021-06-30 14:43:16.703 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.mapper.QuestionExtMapper.inView  : ==>  Preparing: update QUESTION set VIEW_COUNT = VIEW_COUNT + ? where id = ? 
+2021-06-30 14:43:16.705 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.mapper.QuestionExtMapper.inView  : ==> Parameters: 1(Integer), 196(Long)
+2021-06-30 14:43:16.708 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.mapper.QuestionExtMapper.inView  : <==    Updates: 1
+2021-06-30 14:43:16.721 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.CommentMapper.selectByExample  : ==>  Preparing: select ID, PARENT_ID, TYPE, GMT_CREATOR, GMT_MODIFIED, COMMENTATOR, LIKE_COUNT, CONTENT, COMMENT_COUNT from COMMENT WHERE ( PARENT_ID = ? and TYPE = ? ) order by gmt_creator desc 
+2021-06-30 14:43:16.721 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.CommentMapper.selectByExample  : ==> Parameters: 196(Long), 1(Integer)
+2021-06-30 14:43:16.722 DEBUG 12404 --- [http-nio-8887-exec-10] l.m.c.c.m.CommentMapper.selectByExample  : <==      Total: 0
+2021-06-30 17:10:01.169  INFO 12404 --- [Thread-11] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2021-06-30 17:10:01.652  INFO 12404 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-06-30 17:10:01.688  INFO 12404 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-06-30 17:10:01.844  INFO 12404 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-RNBM3MT with PID 12404 (D:\ChromeCoreDownloads\community\target\classes started by ZL in D:\ChromeCoreDownloads\community)
+2021-06-30 17:10:01.845  INFO 12404 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2021-06-30 17:10:02.034  WARN 12404 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[life.majiang.community.community.mapper]' package. Please check your configuration.
+2021-06-30 17:10:02.147  INFO 12404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-06-30 17:10:02.148  INFO 12404 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-30 17:10:02.148  INFO 12404 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-30 17:10:02.183  INFO 12404 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-30 17:10:02.183  INFO 12404 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 336 ms
+2021-06-30 17:10:02.194  INFO 12404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-06-30 17:10:02.201  INFO 12404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-06-30 17:10:02.202  INFO 12404 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2021-06-30 17:10:02.271  INFO 12404 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-30 17:10:02.327  WARN 12404 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\ChromeCoreDownloads\community\target\classes\mapper\CommentExtMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ChromeCoreDownloads\community\target\classes\mapper\CommentExtMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'life.majiang.community.community.model.Question'.  Cause: java.lang.ClassNotFoundException: Cannot find class: life.majiang.community.community.model.Question
+2021-06-30 17:10:02.328  INFO 12404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-06-30 17:10:02.351  INFO 12404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-06-30 17:10:02.352  INFO 12404 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-06-30 17:10:02.361  INFO 12404 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-30 17:10:02.408 ERROR 12404 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\ChromeCoreDownloads\community\target\classes\mapper\CommentExtMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ChromeCoreDownloads\community\target\classes\mapper\CommentExtMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'life.majiang.community.community.model.Question'.  Cause: java.lang.ClassNotFoundException: Cannot find class: life.majiang.community.community.model.Question
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.7.jar:5.3.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.7.jar:5.3.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438) [spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337) [spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1336) [spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1325) [spring-boot-2.5.0.jar:2.5.0]
+	at life.majiang.community.community.CommunityApplication.main(CommunityApplication.java:13) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_282]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.0.jar:2.5.0]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\ChromeCoreDownloads\community\target\classes\mapper\CommentExtMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ChromeCoreDownloads\community\target\classes\mapper\CommentExtMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'life.majiang.community.community.model.Question'.  Cause: java.lang.ClassNotFoundException: Cannot find class: life.majiang.community.community.model.Question
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.7.jar:5.3.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.7.jar:5.3.7]
+	... 24 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\ChromeCoreDownloads\community\target\classes\mapper\CommentExtMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ChromeCoreDownloads\community\target\classes\mapper\CommentExtMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'life.majiang.community.community.model.Question'.  Cause: java.lang.ClassNotFoundException: Cannot find class: life.majiang.community.community.model.Question
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180) ~[mybatis-spring-boot-autoconfigure-2.1.1.jar:2.1.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$6720b940.CGLIB$sqlSessionFactory$2(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.1.jar:2.1.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$6720b940$$FastClassBySpringCGLIB$$6e058840.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.1.jar:2.1.1]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.7.jar:5.3.7]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.7.jar:5.3.7]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$6720b940.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.1.jar:2.1.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_282]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.7.jar:5.3.7]
+	... 25 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ChromeCoreDownloads\community\target\classes\mapper\CommentExtMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'life.majiang.community.community.model.Question'.  Cause: java.lang.ClassNotFoundException: Cannot find class: life.majiang.community.community.model.Question
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	... 38 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'life.majiang.community.community.model.Question'.  Cause: java.lang.ClassNotFoundException: Cannot find class: life.majiang.community.community.model.Question
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118) ~[mybatis-3.5.3.jar:3.5.3]
+	... 40 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'life.majiang.community.community.model.Question'.  Cause: java.lang.ClassNotFoundException: Cannot find class: life.majiang.community.community.model.Question
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.5.3.jar:3.5.3]
+	... 44 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: life.majiang.community.community.model.Question
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.5.3.jar:3.5.3]
+	... 46 common frames omitted
+
+2021-06-30 17:10:05.181  INFO 12404 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-RNBM3MT with PID 12404 (D:\ChromeCoreDownloads\community\target\classes started by ZL in D:\ChromeCoreDownloads\community)
+2021-06-30 17:10:05.181  INFO 12404 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2021-06-30 17:10:05.543  INFO 12404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-06-30 17:10:05.544  INFO 12404 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-30 17:10:05.544  INFO 12404 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-30 17:10:05.569  INFO 12404 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-06-30 17:10:05.569  INFO 12404 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 386 ms
+2021-06-30 17:10:05.580  INFO 12404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-06-30 17:10:05.587  INFO 12404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-06-30 17:10:05.587  INFO 12404 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2021-06-30 17:10:05.743  INFO 12404 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-30 17:10:05.783  INFO 12404 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-30 17:10:05.794  INFO 12404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-06-30 17:10:05.799  INFO 12404 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 0.643 seconds (JVM running for 8820.11)
+2021-06-30 17:10:05.799  INFO 12404 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-30 17:10:05.801  INFO 12404 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-06-30 17:10:05.801  INFO 12404 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
