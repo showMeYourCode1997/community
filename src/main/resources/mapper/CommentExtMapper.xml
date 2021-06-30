@@ -18,7 +18,7 @@
         <result column="TAG" jdbcType="VARCHAR" property="tag" />
     </resultMap>
     <update id="inCommentCount" parameterType="life.majiang.community.community.model.Comment">
-        update COMMENT
+        update 'COMMENT'
         set COMMENT_COUNT = COMMENT_COUNT + #{commentCount,jdbcType=INTEGER}
         where id = #{id}
     </update>

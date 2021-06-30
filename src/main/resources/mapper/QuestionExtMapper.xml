@@ -18,23 +18,23 @@
         <result column="TAG" jdbcType="VARCHAR" property="tag" />
     </resultMap>
     <update id="inView" parameterType="life.majiang.community.community.model.Question">
-        update QUESTION
+        update 'QUESTION'
         set VIEW_COUNT = VIEW_COUNT + #{viewCount,jdbcType=INTEGER}
         where id = #{id}
     </update>
     <update id="inCommentCount" parameterType="life.majiang.community.community.model.Question">
-        update QUESTION
+        update 'QUESTION'
         set COMMENT_COUNT = COMMENT_COUNT + #{commentCount,jdbcType=INTEGER}
         where id = #{id}
     </update>
     <select id="selectRelated" parameterType="life.majiang.community.community.model.Question" resultMap="BaseResultMap">
         select *
-        from QUESTION
+        from 'QUESTION'
         where id != #{id} and tag regexp #{tag}
     </select>
     <select id="countBySearch" parameterType="life.majiang.community.community.dto.QuestionQueryDTO" resultType="java.lang.Integer">
         select count (*)
-        from QUESTION
+        from 'QUESTION'
         <where>
             <if test="search != null and search != ''">
                 and title regexp #{search}
@@ -44,7 +44,7 @@
 
     <select id="selectBySearch" parameterType="life.majiang.community.community.dto.QuestionQueryDTO" resultMap="BaseResultMap">
         select *
-        from QUESTION
+        from 'QUESTION'
         <where>
             <if test="search != null and search != ''">
                 and title regexp #{search}

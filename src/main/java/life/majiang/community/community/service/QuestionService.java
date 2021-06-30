@@ -53,7 +53,7 @@ public class QuestionService {
 
 
         //偏移量
-        Integer offset = (page-1)*size;
+        Integer offset = page < 1 ? 0:size*(page-1);
         //根据时间倒序拿到question列表
         QuestionExample questionExample = new QuestionExample();
         questionExample.setOrderByClause("gmt_create desc");

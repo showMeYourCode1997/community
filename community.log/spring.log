@@ -924,3 +924,20 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: life.majiang.com
 2021-06-30 17:10:05.799  INFO 12404 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
 2021-06-30 17:10:05.801  INFO 12404 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
 2021-06-30 17:10:05.801  INFO 12404 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-30 20:36:49.018  INFO 29528 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-RNBM3MT with PID 29528 (D:\ChromeCoreDownloads\community\target\classes started by ZL in D:\ChromeCoreDownloads\community)
+2021-06-30 20:36:49.022  INFO 29528 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2021-06-30 20:36:49.089  INFO 29528 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-30 20:36:49.090  INFO 29528 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-30 20:36:50.607  INFO 29528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2021-06-30 20:36:50.619  INFO 29528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-30 20:36:50.620  INFO 29528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-30 20:36:50.731  INFO 29528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-30 20:36:50.731  INFO 29528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1638 ms
+2021-06-30 20:36:50.770  INFO 29528 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-30 20:36:50.773  WARN 29528 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-06-30 20:36:51.530  INFO 29528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-30 20:36:51.785  INFO 29528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-30 20:36:51.858  INFO 29528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2021-06-30 20:36:51.878  INFO 29528 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 3.328 seconds (JVM running for 4.474)
+2021-06-30 20:36:51.883  INFO 29528 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-30 20:36:51.889  INFO 29528 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
