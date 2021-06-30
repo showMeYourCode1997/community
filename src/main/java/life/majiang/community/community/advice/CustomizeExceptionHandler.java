@@ -1,3 +1,4 @@
+
 package life.majiang.community.community.advice;
 
 
@@ -17,6 +18,7 @@ import java.io.PrintWriter;
 
 //这里的error都是我们自己抛出的异常，在这里被拦截到
 //但是这里拦截的Exception都是我们自己定义的，不能拦截的异常
+
 @ControllerAdvice
 public class CustomizeExceptionHandler {
     @ExceptionHandler(Exception.class)
@@ -30,6 +32,7 @@ public class CustomizeExceptionHandler {
             if (e instanceof CustomizeException){
                 resultDTO = ResultDTO.errorOf((CustomizeException) e);
             }else{
+                e.printStackTrace();
                 resultDTO = ResultDTO.errorOf(CustomizeErrorCode.SYS_ERROR);
             }
             try{
@@ -46,6 +49,7 @@ public class CustomizeExceptionHandler {
             if (e instanceof CustomizeException){
                 model.addAttribute("message",e.getMessage());
             }else{
+                e.printStackTrace();
                 model.addAttribute("message",CustomizeErrorCode.SYS_ERROR.getMessage());
             }
             return new ModelAndView("error");
