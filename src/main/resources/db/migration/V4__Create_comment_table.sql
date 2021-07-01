@@ -1,4 +1,4 @@
-create table comment
+create table `comment`
 (
     id bigint auto_increment,
     type int,
