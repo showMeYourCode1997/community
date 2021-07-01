@@ -9,6 +9,6 @@ create table comment
     like_count bigint default 0,
     content varchar(1024),
     comment_count int default 0,
-    constraint COMMENT_PK
+    constraint comment_pk
         primary key (id)
 );

@@ -9,6 +9,6 @@ create table notification
     status int default 0,
     notifier_name varchar(100),
     outer_title varchar(256),
-    constraint NOTIFICATION_PK
+    constraint notification_pk
         primary key (id)
 );
